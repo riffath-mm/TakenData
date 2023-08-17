@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome to workshop2</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <form>
+    <label for="name">Name   </label> <input type="text" id="name"/ ><br/><br/>
+    
+    <label for="rollno">Roll no  </label><input type="text" id="rollno"/><br/><br/>
+    <label for="classroom">Class  </label><input type="text" id="classroom"/><br/><br/>
+    <button onclick="clickme(event)">Submit</button>
+
+    </form>
+
+    
+    <div id="demo" style="border:2px solid black; margin-top: 3px; padding:20px;"> </div>
+    <script>
+        function clickme(event)
+        {
+            event.stopPropagation();
+            event.preventDefault();
+
+            let name= document.getElementById("name").value;
+            console.log(name);
+
+            let rollno= document.getElementById("rollno").value;
+            console.log(rollno);
+
+
+            let li= document.createElement("div");
+            li.innerHTML =`<p><li>Name: ${name} </li> <li>Rollno ${rollno}</li></p>`;
+        
+            
+              document.getElementById("demo").appendChild(li);
+        }
+        let arr={
+            Name:"Riffath",
+            rollno:20,
+            classroom:"Mravel-Minds"
+
+
+        }
+        console.log(arr);
+        for(let i=0;i<arr.length ; i++)
+         {
+            let flag=1;
+            if(flag===1)
+            {
+                //  arr.push(i)
+                console.log("condition met");
+                break;
+            }
+            else{
+
+
+            }
+            
+        }
+       
+    </script>
+    
+</body>
+</html>
